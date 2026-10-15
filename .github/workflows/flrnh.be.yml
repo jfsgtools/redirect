@@ -1,10 +1,11 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: flrnh.be
+name: flrnh.be deployment
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches:
+    - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -42,7 +43,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: flrnh.be
     runs-on: ubuntu-latest
     needs: build
     steps:
